@@ -10,7 +10,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: Trigger repository dispatch
-       uses: peter-evans/PROGRAMMERS-BADGE
+       uses: peter-evans/repository-dispatch@v1
        with:
          token: ${{ secrets.GH_PAT }}
          repository: jms0326/PROGRAMMERS-BADGE
