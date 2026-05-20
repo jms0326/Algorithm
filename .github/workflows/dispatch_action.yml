@@ -1,0 +1,17 @@
+name: dispatch_action
+
+on:
+ push:
+   branches:
+     - master
+
+jobs:
+ dispatch:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Trigger repository dispatch
+       uses: peter-evans/PROGRAMMERS-BADGE
+       with:
+         token: ${{ secrets.GH_PAT }}
+         repository: jms0326/PROGRAMMERS-BADGE
+         event-type: trigger-workflow
