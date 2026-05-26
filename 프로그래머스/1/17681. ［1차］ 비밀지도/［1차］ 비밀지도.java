@@ -9,7 +9,7 @@ class Solution {
             //첫단어가 " " 경우 지워지기 때문에 경우 처리 
             if(answer[i].length() < n) {
                 for(int j = 0; j <= n -answer[i].length(); j++) {
-                    answer[i] = ' ' + answer[i];    
+                    answer[i] = " " + answer[i];    
                 }
             }
         }
