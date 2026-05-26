@@ -6,7 +6,7 @@ class Solution {
             answer[i] = Integer.toBinaryString(arr1[i] | arr2[i]);
             answer[i] = answer[i].replace("0"," ").replace("1","#");
             
-            //첫단어가 " " 경우 지워지기 때문에 경우 처리 
+            //answer[i] 첫단어가 " " 경우 ""로 지워지기 때문에 공백 보완 처리 
             if(answer[i].length() < n) {
                 for(int j = 0; j <= n -answer[i].length(); j++) {
                     answer[i] = " " + answer[i];    
