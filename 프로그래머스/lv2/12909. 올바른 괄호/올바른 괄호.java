@@ -7,8 +7,7 @@ class Solution {
         for(int i = 0; i < s.length(); i++) {
             if(s.charAt(i) == '(') {
                 count++;
-            }
-            if(s.charAt(i) == ')') {
+            } else if(s.charAt(i) == ')') {
                 count--;
             }
             if(count < 0) {
