@@ -1,21 +1,20 @@
+import java.util.*;
+
 class Solution {
     boolean solution(String s) {
-        boolean answer = false;
-           
-        int count = 0;
-        
+          Deque<Character> stack = new ArrayDeque<>();
+
         for(int i = 0; i < s.length(); i++) {
-            if(s.charAt(i) == '(') {
-                count++;
-            } else if(s.charAt(i) == ')') {
-                count--;
+            char data = s.charAt(i);
+            if(data == '(') {
+                stack.push('(');
+            } else if(stack.isEmpty()) {
+                return false;
+            } else if(!stack.isEmpty() && stack.peek() == '('){
+                    stack.pop();
+                }
             }
-            if(count < 0) {
-                return false; 
-            }
-        }
-        
-        return count == 0;
+        return stack.isEmpty();
     }
 }
 
